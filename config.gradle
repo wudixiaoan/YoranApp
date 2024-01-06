@@ -1,0 +1,82 @@
+ext {
+    app = [
+            //灵猫
+            applicationId: "com.yoran.app",
+            versionCode  : 1,
+            versionName  : "0.0.1",
+            //数据库版本号
+            databaseVersion  : 1,
+    ]
+    base = [
+            //公共版本号
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.2",
+            minSdkVersion    : 23,
+            targetSdkVersion : 29,
+    ]
+    dependencies = [
+            //android原生依赖
+            "appcompat"                    : 'androidx.appcompat:appcompat:1.0.2',
+            "material"                     : "com.google.android.material:material:1.0.0",
+            "constraintlayout"             : "androidx.constraintlayout:constraintlayout:1.1.3",
+            //三方依赖
+            //dao
+            "greendao"                     : "org.greenrobot:greendao:3.3.0",
+            //rx
+            "rxjava"                       : "io.reactivex.rxjava2:rxjava:2.2.9",
+            "rxandroid"                    : "io.reactivex.rxjava2:rxandroid:2.1.1",
+            "rxlifecycle"                  : "com.trello.rxlifecycle2:rxlifecycle-components:2.2.2",
+            //dagger
+            "dagger"                       : "com.google.dagger:dagger:2.22.1",
+            "dagger-compiler"              : "com.google.dagger:dagger-compiler:2.22.1",
+            "dagger-android"               : "com.google.dagger:dagger-android:2.22.1",
+            "dagger-android-support"       : "com.google.dagger:dagger-android-support:2.22.1",
+            "dagger-android-processor"     : "com.google.dagger:dagger-android-processor:2.22.1",
+            "javax_annotation"             : "org.glassfish:javax.annotation:10.0-b28",
+            //路由
+            "arouter_api"                  : "com.alibaba:arouter-api:1.4.0",
+            "arouter_compiler"             : "com.alibaba:arouter-compiler:1.2.1",
+            "arouter_annotation"           : "com.alibaba:arouter-annotation:1.0.4",
+            //butterknife
+            "butterknife"                  : "com.jakewharton:butterknife:10.2.3",
+            "butterknife-compiler"         : "com.jakewharton:butterknife-compiler:10.2.3",
+            //multidex
+            "multidex"                     : "com.android.support:multidex:1.0.3",
+            //okhttp
+            "okhttp"                       : "com.squareup.okhttp3:okhttp:3.12.0",
+            "logging-interceptor"          : "com.squareup.okhttp3:logging-interceptor:3.12.0",
+            //retrofit
+            "retrofit"                     : "com.squareup.retrofit2:retrofit:2.3.0",
+            "converter-gson"               : "com.squareup.retrofit2:converter-gson:2.3.0",
+            "converter-scalars"            : "com.squareup.retrofit2:converter-scalars:2.3.0",
+            "adapter-rxjava2"              : "com.squareup.retrofit2:adapter-rxjava2:2.3.0",
+            //json
+            "json"                         : "com.alibaba:fastjson:1.1.57.android",
+            //websocket
+            "websocket"                    : "org.java-websocket:Java-WebSocket:1.3.9",
+            //usb转串口
+            "usb-serial"                   : "com.github.mik3y:usb-serial-for-android:3.5.1",
+            //mars-core
+            "mars-core"                    : "com.tencent.mars:mars-core:1.2.5",
+            //queue 依赖
+            "queue"                        : "com.birbit:android-priority-jobqueue:2.0.1",
+            //ui
+            "qmui"                         : 'com.qmuiteam:qmui:2.0.0-alpha10',
+            //recyclerView
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44",
+            //Loader依赖
+            "loader"                       : "com.wang.avi:library:2.1.3",
+            //zxing 依赖
+            "zxing"                        : "com.google.zxing:core:3.2.1",
+            //glide
+            "glide"                        : "com.github.bumptech.glide:glide:4.8.0",
+            "glide_compiler"               : "com.github.bumptech.glide:compiler:4.8.0",
+            //oss
+            "oss"                          : 'com.aliyun.dpa:oss-android-sdk:2.9.13',
+            //事件订阅
+            "eventbus"                     : "org.greenrobot:eventbus:3.0.0",
+            //zxing 依赖
+            "zxing"                        : "com.google.zxing:core:3.2.1",
+
+    ]
+}

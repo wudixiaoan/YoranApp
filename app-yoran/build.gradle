@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion rootProject.ext.base.compileSdkVersion
+    buildToolsVersion rootProject.ext.base.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.app.applicationId
+        minSdkVersion rootProject.ext.base.minSdkVersion
+        targetSdkVersion rootProject.ext.base.targetSdkVersion
+        versionCode rootProject.ext.app.versionCode
+        versionName rootProject.ext.app.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+                includeCompileClasspath = true
+            }
+        }
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('../key/MT8735_platform.jks')
+            storePassword '123456'
+            keyAlias 'MT8735_platform'
+            keyPassword '123456'
+        }
+
+        debug {
+            storeFile file('../key/MT8735_platform.jks')
+            storePassword '123456'
+            keyAlias 'MT8735_platform'
+            keyPassword '123456'
+        }
+    }
+    greendao {
+        schemaVersion rootProject.ext.app.databaseVersion
+        daoPackage 'com.yoran.app.model.db'
+        targetGenDir 'src/main/java'
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+dependencies {
+    implementation project(path: ':module-common')
+}

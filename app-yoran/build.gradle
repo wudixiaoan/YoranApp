@@ -20,9 +20,6 @@ android {
                 includeCompileClasspath = true
             }
         }
-        ndk {
-            abiFilters 'armeabi-v7a'
-        }
     }
 
     buildTypes {
@@ -56,12 +53,14 @@ android {
         daoPackage 'com.yoran.app.model.db'
         targetGenDir 'src/main/java'
     }
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
 }
 dependencies {
     implementation project(path: ':module-common')
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+    annotationProcessor rootProject.ext.dependencies["dagger-android-processor"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    annotationProcessor rootProject.ext.dependencies["arouter_compiler"]
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide_compiler"]
 }

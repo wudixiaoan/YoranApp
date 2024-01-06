@@ -1,10 +1,11 @@
 package com.yoran.app.di.module;
 
 
-import com.ph.lingmao.module.DataClient;
-import com.ph.lingmao.module.db.DbHelperImpl;
-import com.ph.lingmao.module.http.helper.IHttpHelperImpl;
-import com.ph.lingmao.module.sp.SharedPreferenceHelperImpl;
+
+import com.yoran.app.model.DataClient;
+import com.yoran.app.model.db.DbHelperImpl;
+import com.yoran.app.model.http.helper.IHttpHelperImpl;
+import com.yoran.app.model.sp.SharedPreferenceHelperImpl;
 
 import javax.inject.Singleton;
 

@@ -1,6 +1,7 @@
 package com.yoran.app.ui.main;
 
 import com.ph.common.base.activity.BaseActivity;
+import com.yoran.app.R;
 import com.yoran.app.present.main.MainContract;
 import com.yoran.app.present.main.MainPresenter;
 
@@ -32,6 +33,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     protected int getLayout() {
-        return 0;
+        return R.layout.activity_main;
     }
 }

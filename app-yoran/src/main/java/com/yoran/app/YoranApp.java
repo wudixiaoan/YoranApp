@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.ph.common.base.BaseApplication;
 import com.ph.common.log.XLog;
+import com.yoran.app.di.component.DaggerAppComponent;
 import com.yoran.app.model.db.DaoMaster;
 import com.yoran.app.model.db.DaoSession;
 import com.yoran.app.model.db.ReleaseOpenHelper;
@@ -20,7 +21,7 @@ public class YoranApp extends BaseApplication {
 
     @Override
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-        return null;
+        return DaggerAppComponent.create();
     }
 
     @Override
